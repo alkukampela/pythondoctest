@@ -8,7 +8,7 @@ redis = Redis(host='redis', port=6379)
 @app.route('/')
 async def test(request):
     count = redis.incr('hits')
-    return json({"hello": "I have been seen {} timezzz.".format(count)})
+    return json({"hello": f"I have been seen {count} timezzz."})
 
 
 if __name__ == "__main__":
