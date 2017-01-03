@@ -9,7 +9,7 @@ WORKDIR /code
 # Installing sanic needs these
 RUN apk add --no-cache --virtual .sanic-deps \
     g++ \
- 	make \
+    make \
     && pip3 install -r requirements.txt \
     && apk del .sanic-deps
 
